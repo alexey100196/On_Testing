@@ -3,8 +3,7 @@
   let addMessage = document.querySelector('.message'),
     addButton = document.querySelector('.add'),
     todo = document.querySelector('.todo'),
-    clearLocal = document.querySelector('#clearLocal'),
-    removeItem = document.querySelector('.removeItem');
+    clearLocal = document.querySelector('#clearLocal');
 
 
   function displayMessage() {
@@ -12,10 +11,10 @@
     let displayMessage = '';
     todoList.forEach(function (item, i) {
       displayMessage += `
-          <li class='item-${i}'>
+          <li class='item-${i} ${item.important ? 'important' : ''}'>
             <input type="checkbox" id="item-${i}" ${item.checked ? 'checked' : ''}>
-            <label for="item-${i}" class="${item.important ? 'important' : ''}">${item.todo}</label>
-            <button class="removeItem-${i}">x</button>
+            <label for="item-${i}">${item.todo}</label>
+            <button class="btn removeItem-${i}">x</button>
             </li>`;
       todo.innerHTML = displayMessage;
     });
@@ -35,12 +34,11 @@
       checked: false,
       important: false,
     }
-    todoList.push(newTodo)
+    
+   addMessage.value == '' ? alert('tekst vvedi suk') : todoList.push(newTodo) // проверка введен ли текст в инпут
     displayMessage()
     localStorage.setItem('todo', JSON.stringify(todoList));// запись в локалсторедж
   })
-
-
 
   todo.addEventListener('change', function (event) {
 
@@ -66,6 +64,7 @@
   todo.addEventListener('contextmenu', function (event) {
     event.preventDefault(); //отменяем стандартоне повидение браузера
     todoList.forEach(function (item, i) {
+      
       if (item.todo === event.target.innerHTML) {
         if (event.ctrlKey) { // удаление
           todoList.splice(i, 1) // поиск по индекссу

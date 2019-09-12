@@ -1,0 +1,54 @@
+.btn {
+  border: none;
+  background-color: greenyellow;
+  padding: .3rem .9rem;
+  border-radius: 3px;
+  border: 1px solid rgba(7, 219, 0, 0)
+}
+.btn:active {
+  background-color: rgb(248, 255, 239);
+}
+.btn:hover {
+  border: 1px solid rgb(151, 235, 27);
+}
+
+.main-container {
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-weight: 600;
+}
+.main-container .todo_list h1 {
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+.main-container #instruction {
+  background-color: greenyellow;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+}
+.main-container #instruction h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.main-container #instruction ul li{
+  margin-bottom: 10px;
+}
+.important {
+  background-color: rgb(101, 177, 224) !important;
+}
+.main-container .wrapper {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.main-container .wrapper ul {
+  padding: 1rem 0;
+}
+.main-container .wrapper ul li {
+  background-color: rgb(252, 155, 171);
+  border-bottom: 1px solid black;
+  padding: 1rem;
+}
