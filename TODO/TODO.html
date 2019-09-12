@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DOM</title>
+</head>
+<style>
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .main-container #instruction {
+    margin: 0 auto;
+    background-color: greenyellow;
+    border-radius: 10%;
+    padding: 1rem 2rem;
+  }
+
+  .important {
+    color: red;
+  }
+</style>
+
+<body>
+  <div class="main-container">
+    <section class="todo_list">
+      <h1>ToDoList</h1>
+      <div class="create_new_todo">
+        <input type="text" class="message" placeholder="msg">
+        <button class="add">add</button>
+        <button id="clearLocal">clear stories</button>
+      </div>
+      <div class="wrapper">
+        <ul class="todo">
+
+        </ul>
+      </div>
+    </section>
+    <section id="instruction">
+      <h1>instruction</h1>
+      <ul>
+        <li>
+          пкм - выдиление
+        </li>
+        <li>
+          ctrl + пкм - удаление
+        </li>
+      </ul>
+    </section>
+  </div>
+  <script src="js.js"></script>
+</body>
+
+</html>
