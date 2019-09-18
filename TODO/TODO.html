@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="reset.css">
+  <title>DOM</title>
+</head>
+
+
+<body>
+  <div class="main-container">
+    <section class="todo_list">
+      <h1>ToDoList</h1>
+      <div class="create_new_todo">
+        <input type="text" class="message" placeholder="msg">
+        <button class="btn add">add</button>
+        <button class="btn" id="clearLocal">clear stories</button>
+      </div>
+      <div class="wrapper">
+        <ul class="todo">
+
+        </ul>
+      </div>
+    </section>
+    <section id="instruction">
+      <h1>instruction</h1>
+      <ul>
+        <li>
+          пкм - выдиление
+        </li>
+        <li>
+          ctrl + пкм - удаление
+        </li>
+      </ul>
+    </section>
+  </div>
+  <script src="js.js"></script>
+</body>
+
+</html>
