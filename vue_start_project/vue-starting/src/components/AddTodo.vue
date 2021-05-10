@@ -7,15 +7,15 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       title: ''
     }
   },
   methods: {
-    onSubmit() {
+    onSubmit () {
       console.log('Submit', this.title)
-      if(this.title.trim()) {
+      if (this.title.trim()) {
         const newTodo = {
           id: Date.now(),
           title: this.title,

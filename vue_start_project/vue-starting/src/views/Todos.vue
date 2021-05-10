@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>odo application</h2>
+    <h2>Todo application</h2>
     <router-link to="/">Home</router-link>
     <AddTodo
       @add-todo="addTodo"
